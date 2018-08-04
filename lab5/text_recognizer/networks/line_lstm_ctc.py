@@ -50,6 +50,7 @@ def line_lstm_ctc(input_shape, output_shape, window_width=28, window_stride=14):
     convnet_outputs = TimeDistributed(convnet)(image_patches)
     # (num_windows, 128)
 
+    convnet_outputs = Dropout(0.2)(convnet_outputs)
     lstm_output = lstm_fn(128, return_sequences=True)(convnet_outputs)
     # (num_windows, 128)
 
