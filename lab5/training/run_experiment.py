@@ -15,7 +15,7 @@ from training.util import train_model
 
 DEFAULT_TRAIN_ARGS = {
     'batch_size': 10,
-    'epochs': 40
+    'epochs': 50
 }
 
 
